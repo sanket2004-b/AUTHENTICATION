@@ -1,0 +1,12 @@
+
+<h1>Welcome 🎉</h1>
+<p>You are successfully logged in using JWT Authentication.</p>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "/user/login";
+}
+</script>
