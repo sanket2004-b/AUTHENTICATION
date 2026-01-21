@@ -5,14 +5,14 @@ const User = require("../models/user");
 
 const router = express.Router();
 
-/* PAGES */
+// fronted render pages
 router.get("/signup", (req, res) => res.render("signup"));
 router.get("/login", (req, res) => res.render("login"));
 router.get("/home", (req, res) => res.render("home"));
 
-/* SIGNUP */
+
 router.post("/signup", async (req, res) => {
-  console.log("BODY 👉", req.body); 
+  console.log("BODY ", req.body); 
 
   const { fullName, email, password } = req.body;
 
@@ -34,9 +34,9 @@ router.post("/signup", async (req, res) => {
   res.redirect("/user/login");
 });
 
-/* LOGIN */
+// login route
 router.post("/login", async (req, res) => {
-  console.log("BODY 👉", req.body);
+  console.log("BODY ", req.body);
   const { email, password } = req.body;
 
   const user = await User.findOne({ email });

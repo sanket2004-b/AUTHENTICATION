@@ -1,12 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
-<h1>Welcome 🎉</h1>
-<p>You are successfully logged in using JWT Authentication.</p>
+<div class="home-container">
+  <h1>Welcome 🎉</h1>
+  <p>You are successfully logged in using JWT Authentication.</p>
 
-<button onclick="logout()">Logout</button>
+  <button onclick="logout()">Logout</button>
+</div>
 
 <script>
 function logout() {
-    localStorage.removeItem("token");
-    window.location.href = "/user/login";
+  window.location.href = "/user/login";
 }
 </script>
+
+</body>
+</html>
+
